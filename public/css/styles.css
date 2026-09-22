@@ -1,20 +1,385 @@
-html, body {
-    width: 90%;
-    margin: 0 auto;
-    padding: 0px;
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #222;
+  background-color: #f8f8f8;
+  line-height: 1.6;
 }
 
-nav ul {
-    list-style: none; 
-    padding-left:0;
+/* Links */
+a {
+  text-decoration: none;
+  color: #0066cc;
 }
-nav li {
-    display:inline;
 
+a:hover {
+  color: #004999;
 }
-.active {
-    color :white;
-    background-color:green;
-    padding:0.5em;
 
+/* ======== Header ======== */
+.site-header {
+  background: #0a1833;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  flex-wrap: wrap;
+}
+
+.logo-wrap {
+  display: flex;
+  align-items: center;   
+  gap: 1rem;
+  overflow: hidden;
+}
+
+.logo {
+  width: 90px;
+  height: 100px;
+  border: 4px solid white;
+  border-radius: 15px;
+  margin-left: 20px;
+}
+
+/* Navigation */
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.main-nav a {
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.main-nav a:hover,
+#active a {
+  color: #66d9ff;
+}
+
+.hero-head{
+  color: #02005bc1;
+}
+
+/* ======== Hero Section ======== */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 10%;
+  background: linear-gradient(135deg, #e8f1ff 0%, #ffffff 100%);
+}
+
+.hero-text {
+  flex: 1 1 400px;
+  padding: 1rem;
+}
+
+.hero-kicker {
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #0066cc;
+  margin-bottom: 0.5rem;
+}
+
+.hero-text h1 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.hero-sub {
+  margin-bottom: 1.5rem;
+  color: #444;
+}
+
+/* Hero button */
+.btn-primary1 {
+  display: inline-block;
+  background: #0066cc;
+  color: #fff;
+  padding: 0.7rem 1.3rem;
+  border-radius: 5px;
+  
+}
+
+.btn-primary:hover {
+  background: #004999;
+}
+
+/* Hero image */
+.hero-visual {
+  flex: 1 1 300px;
+  text-align: center;
+}
+
+.hero-chart {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.hero-note {
+  font-size: 0.8rem;
+  color: #777;
+  margin-top: 0.5rem;
+}
+
+/* ======== Cards Section ======== */
+.cards-section {
+  text-align: center;
+  padding: 3rem 10%;
+}
+
+.cards-section h2 {
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  color: #222;
+}
+
+/* Grid layout */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.info-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.info-card h3 {
+  color: #0066cc;
+  margin-bottom: 0.6rem;
+}
+
+.card-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #004999;
+  font-weight: 500;
+}
+
+/* ======== Footer ======== */
+.site-footer {
+  background: #0a1833;
+  color: #ccc;
+  text-align: center;
+  padding: 1.5rem 5%;
+  margin-top: 3rem;
+}
+
+.footer-nav {
+  margin-bottom: 0.5rem;
+}
+
+.footer-nav a {
+  color: #66d9ff;
+  margin: 0 0.5rem;
+}
+
+.footer-nav a:hover {
+  color: #fff;
+}
+
+.site-footer p {
+  font-size: 0.85rem;
+}
+
+.Framework-kicker{
+  color: #034090;
+}
+
+.content-section{
+  color: rgb(5, 54, 128);
+}
+
+.core-kicker{
+  color: rgb(0, 50, 119);
+}
+
+/* Main layout for sidebar + content */
+.main-content {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Left sidebar */
+.sidebar {
+  width: 280px;
+  background: #0a1833;
+  color: #fff;
+  padding: 2rem 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+}
+
+/* Sidebar heading */
+.sidebar-nav h2 {
+  color: #66d9ff;
+  margin-bottom: 1rem;
+}
+
+/* Sidebar list */
+.sidebar-nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-nav li {
+  margin-bottom: 0.8rem;
+}
+
+.sidebar-nav a {
+  color: #fff;
+  display: block;
+  padding: 0.5rem 0;
+}
+
+.sidebar-nav a:hover {
+  color: #66d9ff;
+}
+
+/* English and Support area */
+.sidebar-lang {
+  margin-top: 2rem;
+}
+
+.sidebar-lang h3 {
+  margin-bottom: 0.8rem;
+  color: #fff;
+}
+
+/* Sidebar buttons */
+.btn-login,
+.btn-demo,
+.btn-primary {
+  width: 100%;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 6px;
+  margin-top: 0.7rem;
+  cursor: pointer;
+}
+
+.btn-login {
+  background: #fff; 
+  color: #0a1833;
+}
+
+.btn-demo {
+  background: #111;
+  color: #fff;
+}
+
+.btn-primary1 {
+  background: #0066cc;
+  color: #fff;
+ 
+}
+
+.btn-primary:hover {
+  background: #d6e7ff;
+}
+
+/* Right side content */
+.contact-main {
+  margin-left: 280px;
+  padding: 2rem;
+  width: calc(100% - 280px); 
+}
+
+/* Top text box */
+.contact-hero {
+  background: #e8f1ff;
+  padding: 4rem;
+ 
+}
+
+/* Form area */
+.contact-form-section {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.form-group textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+.toolkit-image {
+  float: right;
+  margin: 0 6em 1em 1em;
+  max-width: 700px;
+  border-radius: 8px;
+  padding: 3rem;
+  height: 470px;
+ 
+}
+
+.atu-map { 
+    padding: 3rem 10%; 
+    text-align: center; 
+    background: #f0f8ff; 
+    margin: 2rem 0;
+}
+
+.atu-map iframe { 
+    max-width: 800px; 
+    width: 100%; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
+    margin: 1rem 0;
+}
+
+.custom-bullets { list-style-type: square; }
+table { 
+    border: 1px solid #ccc; 
+    border-collapse: collapse; 
+    width: 100%; 
+    margin: 1rem 0;
+}
+th, td { 
+    border: 1px solid #ccc; 
+    padding: 8px; 
+}
+th { background: #0066cc; color: white; }
+
+.tool-columns { 
+    column-count: 2; 
+    column-rule: 1px solid #0066cc; 
+    column-gap: 2rem; 
+    padding: 1rem; 
+    background: #f8f8f8; 
 }

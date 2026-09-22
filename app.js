@@ -28,7 +28,7 @@ app.set('views',  'views');
 
 // where to find static files - css, images, js
 // this needs to be uncommented so that the css file can be found and used in the layout.hbs file
-//app.use(express.static('public'));
+app.use(express.static('public'));
 
 // home page or home route
 app.get('/', (req, res) => {
@@ -51,6 +51,24 @@ app.get('/contact', (req, res) => {
     res.render('contact', { state, head});
     console.log('contact')
   });
+
+  // blueprint route
+app.get('/blueprint', (req, res) => {
+    state={blueprint : true}
+    head={title:"Blueprint - Week 1"}
+    res.render('blueprint', { state, head});
+    console.log('blueprint')
+  });
+
+    // toolkit route
+app.get('/toolkit', (req, res) => {
+    state={toolkit : true}
+    head={title:"Toolkit - Week 1"}
+    res.render('toolkit', { state, head});
+    console.log('toolkit')
+  });
+
+
 
 
 // Start the server
