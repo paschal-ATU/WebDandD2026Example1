@@ -69,6 +69,15 @@ app.get('/toolkit', (req, res) => {
   });
 
 
+  // responsive example route
+  app.get('/responsiveexample', (req, res) => {
+    state={responsiveexample : true}
+    head={title:"Responsive Example - Week 1"}
+    res.render('responsiveexample', { state, head});
+    console.log('responsiveexample')
+  });
+
+
 
 
 // Start the server
