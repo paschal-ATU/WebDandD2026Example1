@@ -76,9 +76,7 @@ app.get('/toolkit', (req, res) => {
     res.render('responsiveexample', { state, head});
     console.log('responsiveexample')
   });
-
-
-
+  
 
 // Start the server
 app.listen(3000, () => {

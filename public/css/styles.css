@@ -5,6 +5,15 @@ body {
   line-height: 1.6;
 }
 
+.menu-toggle {
+    background-color: blueviolet;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+
 /* Links */
 a {
   text-decoration: none;
@@ -406,8 +415,15 @@ th { background: #0066cc; color: white; }
     border-radius: 8px;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
     .card-grid {
         grid-template-columns: 1fr;
     }
-}
+
+
+    .menu-toggle {
+        /* display: none; */
+        background-color: red;
+    }
+
+  }
